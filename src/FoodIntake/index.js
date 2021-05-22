@@ -61,7 +61,7 @@ const FoodIntake = () => {
 
             </Grid>
 
-            <Grid xs={11} align="center"
+            <Grid item xs={11} align="center"
                 style={{ backgroundColor: '', paddingTop: 50, paddingBottom: 0, paddingLeft: 0, marginLeft: 30, marginRight: 0 }}
                 className={classes.root} container spacing={3}>
                 <Chip variant="outlined" color="primary" label='Mákos Csirke' />
@@ -85,7 +85,7 @@ const FoodIntake = () => {
                     variant="outlined"
                 />
             </Grid>
-            <Grid xs={11} align="center"
+            <Grid item xs={11} align="center"
                 style={{ backgroundColor: '', paddingTop: 50, paddingBottom: 0, paddingLeft: 0, marginLeft: 30, marginRight: 0 }}
                 className={classes.root} container spacing={3}>
 

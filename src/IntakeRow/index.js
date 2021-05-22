@@ -1,30 +1,18 @@
-import { Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
-import useStyles from '../Main/style';
-import dailyIntake from '../About/data';
 
 
-const IntakeRow = () => {
-    const classes = useStyles();
+const IntakeRow = (props) => {
+    const { rowData } = props
+
     return (
-        <Grid style={{ paddingLeft: 150, paddingRight: 0, paddingTop: 30 }} className={classes.root} container spacing={3}>
-
-            {dailyIntake.map((value, index) =>
-
-                <Fragment key={index}>
-                    <Grid item xs={5} >{value.name}</Grid>
-                    <Grid align="center" item xs={1} >{value.szenhidrat}</Grid >
-                    <Grid align="center" item xs={1} >{value.zsir}</Grid >
-                    <Grid align="center" item xs={1} >{value.feherje}</Grid >
-                    <Grid align="center" item xs={1} >{value.kesztomeg}</Grid >
-                    <Grid align="center" item xs={1} >{value.nyerstomeg}</Grid >
-                </Fragment>
-
-            )
-
-
-            }
-        </Grid >
+        <>
+            <Grid item xs={5} >{rowData.name}</Grid>
+            <Grid align="center" item xs={1} >{rowData.szenhidrat}</Grid >
+            <Grid align="center" item xs={1} >{rowData.zsir}</Grid >
+            <Grid align="center" item xs={1} >{rowData.feherje}</Grid >
+            <Grid align="center" item xs={1} >{rowData.kesztomeg}</Grid >
+            <Grid align="center" item xs={1} >{rowData.nyerstomeg}</Grid >
+        </>
     );
 }
 

@@ -33,10 +33,10 @@ const Main = () => {
       <Grid style={{ marginLeft: 50, paddingTop: 100 }} className={classes.root} container spacing={3}>
       </Grid >
       <Grid align="center" style={{ paddingTop: 0, marginLeft: 30, marginTop: 0, marginBottom: 100, marginRight: 100 }} className={classes.root} container spacing={3}>
-        <Grid container xs={6} align="left">
+        <Grid container item xs={6} align="left">
           <LineChart1></LineChart1>
         </Grid>
-        <Grid container xs={6} align="right">
+        <Grid container item xs={6} align="right">
           <BarChart1></BarChart1>
         </Grid>
       </Grid>
