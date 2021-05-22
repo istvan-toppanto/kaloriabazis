@@ -4,9 +4,9 @@ import globalStyle from '../globalStyles/style';
 
 const useStyles = makeStyles({
 
-  root: {
-    ...globalStyle.defaultColor
-  }
+    root: {
+        ...globalStyle.defaultColor
+    }
 
 });
 

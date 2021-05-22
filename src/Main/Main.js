@@ -1,54 +1,49 @@
 import React from 'react'
-import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import useStyles from './style'
+import LineChart1 from '../Charts/LineChart';
+import BarChart1 from '../Charts/BarChart';
+import { Grid } from "@material-ui/core"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+
 
 
 const Main = () => {
   const classes = useStyles();
 
- return <div>
-    <Grid className={classes.root} container spacing={3}>
-      <Grid item xs={3}>LOGO</Grid>
-      <Grid item xs={9}>
-        <Grid item xs={12}>
-          <Grid container spacing={3}>
-            <Grid item xs={6}>spaceholder</Grid>
-            <Grid item xs={3}>Login/Reg(G)</Grid>
-            <Grid item xs={3}>Logout(G)</Grid>
-          </Grid>
+  return (
+    <div>
+      <Grid className={classes.root} container spacing={3}>
+      </Grid>
+      <Grid style={{ paddingTop: 120, paddingBottom: 100 }} align="center" >
+        <div className={classes.root}>
+          <Link to="/foodintake">
+            <Button size="large" variant="outlined" color="primary">
+              Írd be, hogy mit ettél!
+      </Button>
+          </Link>
+        </div>
+      </Grid>
+      <Grid style={{ marginLeft: 50, paddingTop: 100 }} className={classes.root} container spacing={3}>
+      </Grid >
+      <Grid align="center" style={{ paddingTop: 0, marginLeft: 30, marginTop: 0, marginBottom: 100, marginRight: 100 }} className={classes.root} container spacing={3}>
+        <Grid container xs={6} align="left">
+          <LineChart1></LineChart1>
         </Grid>
-        <Grid item xs={12}>
-          <Grid container spacing={3}>
-            <Grid item xs={4}>Főoldal(G)</Grid>
-            <Grid item xs={4}>Eszközök(G)</Grid>
-            <Grid item xs={4}>Információ(G)</Grid>
-          </Grid>
+        <Grid container xs={6} align="right">
+          <BarChart1></BarChart1>
         </Grid>
       </Grid>
-    </Grid>
+    </div >
+  )
 
-    <Grid container spacing={3}>
-      <Grid item xs={4}>
-        <Grid container spacing={3}>
-          <Grid item xs={8}>spaceholder</Grid>
-          <Grid item xs={4}>balnyil</Grid>
-        </Grid>
-      </Grid>
-      <Grid item xs={4}>
-        <Grid container spacing={3}>
-          <Grid item xs={8}>mai nap</Grid>
-          <Grid item xs={4}>jobbnyil</Grid>
-        </Grid>
-        <Grid item xs={4}>
-          <Grid container spacing={3}>
-            <Grid item xs={3}>jegyzet a naphoz</Grid>
-            <Grid item xs={6}>spaceholder</Grid>
-            <Grid item xs={3}>naptár</Grid>
-          </Grid>
-        </Grid>
-      </Grid>
-    </Grid>
-  </div>
-};
+
+}
 
 export default Main;
